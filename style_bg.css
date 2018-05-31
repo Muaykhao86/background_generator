@@ -1,0 +1,71 @@
+html{
+    min-height: 100%
+
+    }
+
+body{  
+    background: no-repeat linear-gradient(90deg, #ffff00, #00ff00); /* Standard syntax */
+    background-size: cover;
+    text-align: center;
+    font-size: 10px;
+
+}
+
+#userinput {
+
+    margin: 0.5em;
+    text-align: center;
+    background-color: rgba(250,250,250,0.1); 
+    font-size: 2em;
+    
+}
+
+#color1, #color2, #color3{
+    margin: 1em 2em;
+    background-color: rgba(0,0,0,.3);
+   
+}
+
+#enter, #but{
+
+
+    background-color: rgba(250,250,250,.3);
+    font-size: 2em;
+    color: rgba(0,0,0,.5);
+    border: 0.1em solid;
+    border-color: rgba(250,250,250,.5);
+
+}
+h1{
+    font: 600 5em 'Raleway', sans-serif;
+    color: rgba(0,0,0,.5);
+    text-transform: uppercase;
+    letter-spacing: .5em;
+  /*  width: 100%;*/
+    top: 15%;
+    text-align: center;
+}
+
+h2{
+	font: 600 2em 'Raleway', sans-serif;
+    color: rgba(0,0,0,.5);
+    text-transform: uppercase;
+    letter-spacing: .5em;
+    width: 100%;
+    text-align: center;
+    top: 15%;
+}
+
+h3 {
+	font: 900 1.5em 'Raleway', sans-serif;
+    color: rgba(0,0,0,.5);
+    text-transform: none;
+    letter-spacing: 0.01em;
+    text-align: center;
+
+}
+
+
+
+
+
