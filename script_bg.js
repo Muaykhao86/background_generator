@@ -53,24 +53,25 @@ function inputLength() {
 	return input.value.length;
 }
 // This was just so i could get some experience with the includes method
-function includesdeg() {
-	if (inputLength() > 0 && input.value.includes("deg"))
-		return true;
-	}
+// function includesdeg() {
+// 	if (inputLength() > 0 && input.value.includes("deg"))
+// 		return true;
+// 	}
 function changeTiltAfterClick() {
-	if (col === true && includesdeg()=== true) {
+	if (col === true) {
 		thirdcolour();
 	}
-	else if (col === false && includesdeg() === true) {
+	else if (col === false) {
 		getinput();
 	}
 }
-
+	
 function changeTiltAfterKeypress(event) {
-	if (col === true && includesdeg()=== true && event.keyCode === 13){
+
+	if (col === true &&  event.keyCode === 13){
 		thirdcolour();
 	}
-	else if(col === false && includesdeg() === true && event.keyCode === 13){
+	else if(col === false && event.keyCode === 13){
 		getinput();
 	}
 }
@@ -80,17 +81,24 @@ function changeTiltAfterKeypress(event) {
  
 function isit(){
 	col = !col;
+ 
+	itis();
+
+}
+
+function itis(){
+
 if (col ===true){
 		thirdcolour();
 	}
 	else if( col === false){
 		getinput();
 	}
-console.log(col);
+
 }
 
 function getinput (){
-	if (input.value.length < 1){
+	if (input.value.length < 1 && col){
 		body.style.background = 
 		"linear-gradient(50deg, " 
 		+ color1.value 
@@ -102,8 +110,8 @@ function getinput (){
 	else {
 		body.style.background = 
 		"linear-gradient( "
-		+input.value
-		+", "
+		+input.value.trim()
+		+"deg, "
 		+ color1.value 
 		+ ", " 
 		+ color2.value 
@@ -125,11 +133,11 @@ function thirdcolour (){
 		displayStyle();
 		
 	}
-	else if( col === true ){
+	else if( col === true){
 		body.style.background = 
 		"linear-gradient( "
-		+input.value
-		+", "
+		+input.value.trim()
+		+"deg, "
 		+ color1.value 
 		+ ", " 
 		+ color2.value 
@@ -141,9 +149,9 @@ function thirdcolour (){
 	}
 }
 
-color1.addEventListener("input", getinput );
+color1.addEventListener("input", itis );
 
-color2.addEventListener("input", getinput);
+color2.addEventListener("input", itis );
 
 button.addEventListener("click", changeTiltAfterClick);
 
