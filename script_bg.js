@@ -81,7 +81,7 @@ function changeTiltAfterKeypress(event) {
  
 function isit(){
 	col = !col;
- 
+ console.log(col);
 	itis();
 
 }
@@ -91,14 +91,14 @@ function itis(){
 if (col ===true){
 		thirdcolour();
 	}
-	else if( col === false){
+	else if(col === false){
 		getinput();
 	}
 
 }
 
 function getinput (){
-	if (input.value.length < 1 && col){
+	if (input.value.length < 1){
 		body.style.background = 
 		"linear-gradient(50deg, " 
 		+ color1.value 
