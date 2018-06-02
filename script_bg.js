@@ -34,8 +34,14 @@
 
 // MY MESS AROUND CREATION ⬇
 
+// Below is my first attemt at using browserify/.json file/lodash
 
-
+var _ = require('lodash');
+var array = [1,2,3,4,5,6,7,8,9];
+// Then console log the string 'answer' run the method from lodash .without where the first parameter
+// is the array and the second parameter is what we're leaving out of it (without 3)
+console.log('answer:', _.without(array, 3))
+//       //
 var color1 = document.getElementById("color1");
 var color2 = document.getElementById("color2");
 var color3 = document.getElementById("color3");
